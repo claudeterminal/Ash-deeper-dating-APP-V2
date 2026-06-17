@@ -2,701 +2,1628 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
-<title>Deeper Dating · 365 Questions</title>
-<meta name="description" content="365 questions for closer conversations. One a day, for a year." />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Deeper Dating" />
-<meta name="theme-color" content="#F5EBDC" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#2A1F18" media="(prefers-color-scheme: dark)" />
-<link rel="apple-touch-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%232A1F18'/><text x='90' y='124' font-family='Georgia,serif' font-size='100' font-style='italic' fill='%23F5EBDC' text-anchor='middle'>D</text></svg>" />
-<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232A1F18'/><text x='32' y='44' font-family='Georgia,serif' font-size='36' font-style='italic' fill='%23F5EBDC' text-anchor='middle'>D</text></svg>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deeper Dating — 365 Questions That Change a Relationship</title>
+
+<!-- SEO meta -->
+<meta name="description" content="The app of 365 conversation-starting questions across 15 themed chapters. Designed to take couples past small talk and into real intimacy. $9.99, lifetime access.">
+
+<!-- Open Graph (Facebook, LinkedIn, iMessage, Slack, Discord, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://deeper-dating-app-v2.vercel.app/landing.html">
+<meta property="og:title" content="Deeper Dating — 365 Questions That Change a Relationship">
+<meta property="og:description" content="The kind of questions that make someone pause, lean in, and tell you something true. 365 of them. One app. $9.99.">
+<meta property="og:image" content="https://deeper-dating-app-v2.vercel.app/book-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1500">
+<meta property="og:image:alt" content="Deeper Dating — 365 Questions for Couples">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deeper Dating — 365 Questions That Change a Relationship">
+<meta name="twitter:description" content="The kind of questions that make someone pause, lean in, and tell you something true. 365 of them. One app. $9.99.">
+<meta name="twitter:image" content="https://deeper-dating-app-v2.vercel.app/book-image.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DX1VNH513W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DX1VNH513W');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://gumroad.com/js/gumroad.js"></script>
 <style>
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html, body { margin: 0; padding: 0; height: 100%; overscroll-behavior-y: contain; -webkit-text-size-adjust: 100%; }
-body { font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif; background: #F5EBDC; color: #3A2A1F; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transition: background 0.3s; }
-body.dark { background: #2A1F18; }
-.app { max-width: 480px; margin: 0 auto; height: 100vh; height: 100dvh; display: flex; flex-direction: column; background: #F5EBDC; transition: background 0.3s; padding-top: env(safe-area-inset-top); }
-body.dark .app { background: #2A1F18; }
-.header { padding: 1rem 1.25rem 0.875rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 0.5px solid rgba(58,42,31,0.12); flex-shrink: 0; transition: border-color 0.3s; }
-body.dark .header { border-bottom-color: rgba(245,235,220,0.12); }
-.header-spacer { width: 32px; }
-.header-center { text-align: center; flex: 1; }
-.eyebrow { font-size: 9px; letter-spacing: 3px; color: #8B6F4E; margin: 0 0 4px; text-transform: uppercase; font-style: italic; }
-body.dark .eyebrow { color: #C9A988; }
-.wordmark { font-size: 22px; font-weight: 400; color: #3A2A1F; letter-spacing: -0.3px; margin: 0; line-height: 1.1; }
-body.dark .wordmark { color: #F5EBDC; }
-.wordmark em { font-style: italic; color: #6B4F35; font-weight: 500; }
-body.dark .wordmark em { color: #E5C9A8; }
-.mode-toggle { background: transparent; border: none; cursor: pointer; padding: 6px; color: #6B4F35; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background 0.15s; }
-.mode-toggle:active { background: rgba(58,42,31,0.08); }
-body.dark .mode-toggle { color: #E5C9A8; }
-body.dark .mode-toggle:active { background: rgba(245,235,220,0.08); }
-.mode-toggle svg { width: 20px; height: 20px; }
-.content { flex: 1; overflow-y: auto; padding: 1.5rem 1.25rem; -webkit-overflow-scrolling: touch; }
-.intro-block { text-align: center; padding: 0.5rem 0 1.5rem; }
-.intro-title { font-size: 26px; margin: 8px 0; font-weight: 400; line-height: 1.2; color: #3A2A1F; letter-spacing: -0.5px; }
-body.dark .intro-title { color: #F5EBDC; }
-.intro-title em { color: #6B4F35; font-style: italic; }
-body.dark .intro-title em { color: #E5C9A8; }
-.intro-sub { font-size: 14px; color: rgba(58,42,31,0.7); margin: 0; font-style: italic; line-height: 1.5; }
-body.dark .intro-sub { color: rgba(245,235,220,0.7); }
-.intro-ornament { margin-top: 12px; color: #8B6F4E; font-size: 12px; letter-spacing: 6px; }
-body.dark .intro-ornament { color: #C9A988; }
-.section-row { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; border-bottom: 0.5px solid rgba(58,42,31,0.1); cursor: pointer; gap: 14px; transition: opacity 0.15s; }
-.section-row:active { opacity: 0.55; }
-body.dark .section-row { border-bottom-color: rgba(245,235,220,0.08); }
-.s-roman { font-style: italic; font-size: 15px; color: #8B6F4E; min-width: 32px; font-weight: 500; }
-body.dark .s-roman { color: #C9A988; }
-.s-info { flex: 1; min-width: 0; }
-.s-title { font-size: 16px; color: #3A2A1F; margin-bottom: 4px; line-height: 1.3; font-weight: 400; }
-body.dark .s-title { color: #F5EBDC; }
-.s-sub { font-size: 12.5px; color: rgba(58,42,31,0.7); font-style: italic; line-height: 1.4; }
-body.dark .s-sub { color: rgba(245,235,220,0.65); }
-.s-range { font-size: 10px; letter-spacing: 1.5px; color: rgba(58,42,31,0.4); font-style: italic; flex-shrink: 0; }
-body.dark .s-range { color: rgba(245,235,220,0.4); }
-.q-card { background: #FBF5E9; border: 0.5px solid rgba(58,42,31,0.12); border-radius: 18px; padding: 1.4rem; margin-bottom: 14px; transition: background 0.3s, border-color 0.3s; }
-body.dark .q-card { background: #3A2A1F; border-color: rgba(245,235,220,0.1); }
-.q-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
-.section-pill { display: inline-block; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #8B6F4E; margin-bottom: 8px; font-style: italic; }
-body.dark .section-pill { color: #C9A988; }
-.q-num { font-size: 10px; letter-spacing: 2.5px; color: #8B6F4E; font-style: italic; }
-body.dark .q-num { color: #C9A988; }
-.q-text { font-size: 18px; line-height: 1.5; color: #3A2A1F; margin: 10px 0 4px; font-weight: 400; letter-spacing: -0.1px; }
-body.dark .q-text { color: #F5EBDC; }
-.heart-btn { border: none; background: transparent; cursor: pointer; padding: 4px; color: rgba(58,42,31,0.35); display: flex; align-items: center; justify-content: center; transition: transform 0.15s, color 0.2s; }
-.heart-btn:active { transform: scale(1.25); }
-.heart-btn.saved { color: #C44569; }
-body.dark .heart-btn { color: rgba(245,235,220,0.4); }
-body.dark .heart-btn.saved { color: #E89BAE; }
-.heart-svg { width: 22px; height: 22px; }
-.q-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
-.action-btn { background: transparent; border: 0.5px solid rgba(58,42,31,0.22); color: #3A2A1F; padding: 7px 13px; border-radius: 999px; font-size: 11.5px; font-family: inherit; cursor: pointer; letter-spacing: 0.3px; font-style: italic; transition: background 0.15s; display: inline-flex; align-items: center; gap: 5px; }
-.action-btn:active { background: rgba(58,42,31,0.06); }
-.action-btn.has-note { background: rgba(107,79,53,0.12); border-color: rgba(107,79,53,0.35); color: #6B4F35; }
-.action-btn.has-note:active { background: rgba(107,79,53,0.18); }
-body.dark .action-btn { color: #F5EBDC; border-color: rgba(245,235,220,0.3); }
-body.dark .action-btn:active { background: rgba(245,235,220,0.06); }
-body.dark .action-btn.has-note { background: rgba(201,169,136,0.18); border-color: rgba(201,169,136,0.4); color: #E5C9A8; }
-body.dark .action-btn.has-note:active { background: rgba(201,169,136,0.25); }
-.action-btn svg { width: 11px; height: 11px; }
-.action-btn.is-active { background: rgba(107,79,53,0.12); border-color: rgba(107,79,53,0.35); color: #6B4F35; }
-.action-btn.is-active:active { background: rgba(107,79,53,0.18); }
-body.dark .action-btn.is-active { background: rgba(201,169,136,0.18); border-color: rgba(201,169,136,0.4); color: #E5C9A8; }
-body.dark .action-btn.is-active:active { background: rgba(201,169,136,0.25); }
-.discussed-marker { display: inline-flex; align-items: center; gap: 6px; background: rgba(107,79,53,0.12); color: #6B4F35; padding: 6px 11px; border-radius: 999px; font-size: 11.5px; font-style: italic; letter-spacing: 0.3px; }
-body.dark .discussed-marker { background: rgba(201,169,136,0.2); color: #E5C9A8; }
-.discussed-marker svg { width: 11px; height: 11px; }
-.notes-wrap { margin-top: 16px; }
-.notes-area { width: 100%; min-height: 96px; border: 0.5px solid rgba(58,42,31,0.22); border-radius: 12px; padding: 14px; font-family: inherit; font-size: 15px; line-height: 1.55; color: #3A2A1F; background: #F5EBDC; resize: vertical; transition: border-color 0.15s; }
-.notes-area:focus { outline: none; border-color: rgba(58,42,31,0.45); }
-.notes-area::placeholder { color: rgba(58,42,31,0.4); font-style: italic; }
-body.dark .notes-area { background: rgba(245,235,220,0.06); color: #F5EBDC; border-color: rgba(245,235,220,0.22); }
-body.dark .notes-area::placeholder { color: rgba(245,235,220,0.4); }
-body.dark .notes-area:focus { border-color: rgba(245,235,220,0.5); }
-.note-hint { font-size: 11.5px; color: rgba(58,42,31,0.6); margin: 8px 0 0; font-style: italic; }
-body.dark .note-hint { color: rgba(245,235,220,0.55); }
-.ghost-btn { background: transparent; color: #3A2A1F; border: 0.5px solid rgba(58,42,31,0.28); padding: 12px 16px; border-radius: 12px; font-size: 14px; cursor: pointer; font-family: inherit; letter-spacing: 0.2px; transition: background 0.15s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
-.ghost-btn:active { background: rgba(58,42,31,0.06); }
-body.dark .ghost-btn { color: #F5EBDC; border-color: rgba(245,235,220,0.4); background: rgba(245,235,220,0.04); }
-body.dark .ghost-btn:active { background: rgba(245,235,220,0.1); }
-.ghost-btn svg { width: 16px; height: 16px; }
-.primary-btn { background: #3A2A1F; color: #F5EBDC; border: none; padding: 16px 20px; border-radius: 14px; font-size: 15px; font-weight: 500; cursor: pointer; width: 100%; font-family: inherit; letter-spacing: 0.3px; transition: opacity 0.15s, transform 0.1s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
-.primary-btn:active { transform: scale(0.98); }
-body.dark .primary-btn { background: #C9A988; color: #2A1F18; }
-.primary-btn svg { width: 16px; height: 16px; }
-.surface { background: rgba(58,42,31,0.04); border-radius: 16px; padding: 4px 18px; margin-bottom: 16px; }
-body.dark .surface { background: rgba(245,235,220,0.04); }
-.row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 16px 0; border-bottom: 0.5px solid rgba(58,42,31,0.1); }
-.row:last-child { border-bottom: none; }
-body.dark .row { border-bottom-color: rgba(245,235,220,0.1); }
-.row-label { font-size: 15px; color: #3A2A1F; }
-body.dark .row-label { color: #F5EBDC; }
-.row-sub { font-size: 12.5px; color: rgba(58,42,31,0.65); margin-top: 4px; font-style: italic; }
-body.dark .row-sub { color: rgba(245,235,220,0.6); }
-.toggle { display: inline-block; position: relative; width: 48px; height: 26px; cursor: pointer; flex-shrink: 0; }
-.toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
-.toggle-bg { position: absolute; inset: 0; background: rgba(58,42,31,0.22); border-radius: 999px; transition: 0.2s; }
-.toggle-bg.on { background: #6B4F35; }
-.toggle-bg::after { content: ''; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: #F5EBDC; border-radius: 50%; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-.toggle-bg.on::after { transform: translateX(22px); }
-body.dark .toggle-bg { background: rgba(245,235,220,0.2); }
-body.dark .toggle-bg.on { background: #C9A988; }
-body.dark .toggle-bg.on::after { background: #2A1F18; }
-input[type="time"] { font-family: inherit; font-size: 14px; padding: 8px 12px; border: 0.5px solid rgba(58,42,31,0.22); border-radius: 10px; background: #FBF5E9; color: #3A2A1F; }
-body.dark input[type="time"] { background: rgba(245,235,220,0.08); color: #F5EBDC; border-color: rgba(245,235,220,0.25); }
-body.dark input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(0.85) sepia(0.3); }
-.chip-label { font-size: 12.5px; color: rgba(58,42,31,0.7); margin-bottom: 10px; font-style: italic; }
-body.dark .chip-label { color: rgba(245,235,220,0.7); }
-.chip { font-size: 12.5px; padding: 9px 15px; border: 0.5px solid rgba(58,42,31,0.25); border-radius: 999px; background: transparent; cursor: pointer; color: rgba(58,42,31,0.78); font-family: inherit; letter-spacing: 0.3px; transition: all 0.15s; }
-.chip.on { background: #3A2A1F; color: #F5EBDC; border-color: #3A2A1F; }
-body.dark .chip { color: rgba(245,235,220,0.85); border-color: rgba(245,235,220,0.3); }
-body.dark .chip.on { background: #C9A988; color: #2A1F18; border-color: #C9A988; }
-.download-hint { font-size: 11.5px; color: rgba(58,42,31,0.6); margin-top: 14px; line-height: 1.6; font-style: italic; text-align: center; }
-body.dark .download-hint { color: rgba(245,235,220,0.55); }
-.install-card { background: rgba(107,79,53,0.08); border: 0.5px solid rgba(107,79,53,0.18); border-radius: 14px; padding: 14px 16px; margin-bottom: 16px; display: flex; gap: 12px; align-items: flex-start; }
-body.dark .install-card { background: rgba(201,169,136,0.1); border-color: rgba(201,169,136,0.2); }
-.install-card-icon { flex-shrink: 0; color: #6B4F35; padding-top: 1px; }
-body.dark .install-card-icon { color: #C9A988; }
-.install-card-icon svg { width: 18px; height: 18px; }
-.install-card-text { font-size: 12.5px; color: rgba(58,42,31,0.8); line-height: 1.5; font-style: italic; flex: 1; }
-body.dark .install-card-text { color: rgba(245,235,220,0.75); }
-.install-close { background: transparent; border: none; cursor: pointer; color: rgba(58,42,31,0.5); padding: 2px; font-size: 18px; flex-shrink: 0; line-height: 1; }
-body.dark .install-close { color: rgba(245,235,220,0.5); }
-.empty { text-align: center; padding: 3.5rem 1rem; }
-.empty-icon { color: rgba(58,42,31,0.3); display: flex; justify-content: center; margin-bottom: 16px; }
-body.dark .empty-icon { color: rgba(245,235,220,0.3); }
-.empty-icon svg { width: 40px; height: 40px; }
-.empty-title { margin: 0 0 8px; color: #3A2A1F; font-size: 17px; }
-body.dark .empty-title { color: #F5EBDC; }
-.empty-sub { margin: 0; color: rgba(58,42,31,0.7); font-style: italic; font-size: 14px; line-height: 1.5; }
-body.dark .empty-sub { color: rgba(245,235,220,0.65); }
-.tabs-wrap { padding: 0; background: transparent; flex-shrink: 0; padding-bottom: env(safe-area-inset-bottom); position: relative; }
-.tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: transparent; padding: 0 10px; align-items: end; height: 64px; }
-.tab-btn { border: 0.5px solid rgba(58,42,31,0.22); border-bottom: none; background: #C9B696; padding: 10px 4px 14px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; color: rgba(58,42,31,0.7); font-family: inherit; transition: background 0.2s, color 0.2s; border-radius: 12px 12px 0 0; height: 58px; position: relative; z-index: 1; }
-.tab-btn.active { color: #F5EBDC; background: #6B4F35; z-index: 3; border-color: #6B4F35; }
-body.dark .tab-btn { background: #5A4030; border-color: rgba(245,235,220,0.18); color: rgba(245,235,220,0.7); }
-body.dark .tab-btn.active { background: #C9A988; color: #2A1F18; border-color: #C9A988; }
-.tab-btn span { font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; font-style: italic; }
-.tab-icon { width: 22px; height: 22px; }
-.tab-btn span { font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; font-style: italic; }
-.tab-icon { width: 22px; height: 22px; }
-.splash { position: fixed; inset: 0; background: #F5EBDC; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 100; transition: opacity 0.5s; }
-body.dark .splash { background: #2A1F18; }
-.splash.hide { opacity: 0; pointer-events: none; }
-.splash-eyebrow { font-size: 9px; letter-spacing: 3px; color: #8B6F4E; text-transform: uppercase; font-style: italic; margin-bottom: 4px; }
-body.dark .splash-eyebrow { color: #C9A988; }
-.splash-mark { font-size: 32px; color: #3A2A1F; }
-body.dark .splash-mark { color: #F5EBDC; }
-.splash-mark em { font-style: italic; color: #6B4F35; }
-body.dark .splash-mark em { color: #E5C9A8; }
+:root {
+  --cream: #f6efe4;
+  --cream-deep: #ede2cf;
+  --paper: #fbf6ec;
+  --ink: #2a1a14;
+  --ink-soft: #5a3f33;
+  --burgundy: #7a2331;
+  --burgundy-deep: #5a161f;
+  --blush: #e8b8a8;
+  --rust: #c25a3a;
+  --gold: #b8893a;
+  --shadow: rgba(122, 35, 49, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Subtle paper grain over everything */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(122,35,49,0.04), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(184,137,58,0.05), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+.container { position: relative; z-index: 3; }
+
+/* ==================== NAV ==================== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(246, 239, 228, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(42, 26, 20, 0.08);
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: var(--burgundy);
+}
+
+.logo span {
+  display: inline-block;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--rust);
+  margin: 0 0.4rem;
+  vertical-align: middle;
+}
+
+.nav-cta {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.5rem 1.1rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+.nav-cta:hover { background: var(--burgundy); transform: translateY(-1px); }
+
+/* ==================== HERO ==================== */
+.hero {
+  min-height: 100vh;
+  padding: 8rem 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+}
+
+.hero-text { position: relative; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 2.5rem;
+  height: 1px;
+  background: var(--burgundy);
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--burgundy);
+  font-weight: 300;
+}
+
+h1 .accent {
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  color: var(--rust);
+  font-size: 0.85em;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(-3deg);
+  margin: 0 0.2em;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 32rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 1.1rem 2.2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 10px 30px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--burgundy-deep);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn-primary span { position: relative; z-index: 1; }
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(122, 35, 49, 0.25); }
+.btn-primary:hover::before { transform: translateY(0); }
+
+.btn-primary .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.btn-primary:hover .arrow { transform: translateX(4px); }
+
+.guarantee {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guarantee::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(42, 26, 20, 0.1);
+  max-width: 30rem;
+}
+
+.meta-item .num {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: var(--burgundy);
+  font-weight: 500;
+  display: block;
+  line-height: 1;
+}
+
+.meta-item .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  display: block;
+}
+
+/* ==================== BOOK MOCKUP ==================== */
+.book-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 2000px;
+  min-height: 600px;
+}
+
+.book-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(194, 90, 58, 0.18), transparent 65%);
+  filter: blur(30px);
+  border-radius: 50%;
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+.book {
+  position: relative;
+  width: 260px;
+  height: 540px;
+  transform-style: preserve-3d;
+  transform: rotateY(-12deg) rotateX(4deg) rotateZ(-2deg);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: float 7s ease-in-out infinite;
+}
+
+.book:hover {
+  transform: rotateY(-6deg) rotateX(2deg) rotateZ(-1deg) scale(1.03);
+}
+
+@keyframes float {
+  0%, 100% { transform: rotateY(-12deg) rotateX(4deg) rotateZ(-2deg) translateY(0); }
+  50% { transform: rotateY(-12deg) rotateX(4deg) rotateZ(-2deg) translateY(-12px); }
+}
+
+/* Phone body */
+.book-cover {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #2a1a14 0%, #1a0f0a 100%);
+  border-radius: 38px;
+  box-shadow:
+    0 0 0 2px #3a2520,
+    0 0 0 4px #1a0f0a,
+    0 30px 60px rgba(0,0,0,0.35),
+    0 15px 30px rgba(122, 35, 49, 0.25);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Phone screen */
+.book-cover::before {
+  content: '';
+  position: absolute;
+  top: 14px; left: 14px; right: 14px; bottom: 14px;
+  background: linear-gradient(180deg, #2a1a14 0%, #3a2520 100%);
+  border-radius: 26px;
+  z-index: 0;
+}
+
+/* Notch */
+.book-cover::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px; height: 24px;
+  background: #0a0604;
+  border-radius: 14px;
+  z-index: 5;
+}
+
+/* Phone screen container */
+.cover-top {
+  position: relative;
+  z-index: 2;
+  color: rgba(246, 239, 228, 0.6);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  padding-top: 38px;
+  padding-bottom: 16px;
+  font-style: italic;
+}
+
+.cover-mid {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 18px;
+}
+
+.cover-mid .number {
+  font-family: 'Fraunces', serif;
+  font-size: 1.7rem;
+  color: var(--cream);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.cover-mid .number em {
+  font-style: italic;
+  color: var(--blush);
+}
+
+.cover-mid .label {
+  display: none;
+}
+
+.cover-mid .title {
+  display: none;
+}
+
+/* Phone screen chapter list */
+.phone-list {
+  position: relative;
+  z-index: 2;
+  padding: 0 18px;
+  margin-top: 6px;
+  text-align: left;
+}
+
+.phone-list-item {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr auto;
+  gap: 0.6rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(246, 239, 228, 0.08);
+  align-items: center;
+}
+
+.phone-list-item:last-child { border-bottom: none; }
+
+.phone-list-item .roman {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--blush);
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.phone-list-item .chapter {
+  font-family: 'Fraunces', serif;
+  color: var(--cream);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.phone-list-item .chapter small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  color: rgba(246, 239, 228, 0.45);
+  margin-top: 2px;
+  font-weight: 300;
+}
+
+.phone-list-item .range {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: rgba(246, 239, 228, 0.4);
+  font-size: 0.65rem;
+}
+
+.cover-bottom {
+  display: none;
+}
+
+.ornament {
+  font-family: 'Fraunces', serif;
+  color: var(--gold);
+}
+
+/* Hide book-spine and book-pages now that it's a phone */
+.book-spine,
+.book-pages {
+  display: none;
+}
+
+/* Floating tag */
+.book-tag {
+  position: absolute;
+  top: 8%;
+  right: -5%;
+  background: var(--cream);
+  border: 1px solid var(--ink);
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: var(--burgundy);
+  transform: rotate(8deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  z-index: 10;
+  animation: tag-sway 5s ease-in-out infinite;
+}
+
+@keyframes tag-sway {
+  0%, 100% { transform: rotate(8deg); }
+  50% { transform: rotate(5deg) translateY(-4px); }
+}
+
+.book-tag::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px; height: 16px;
+  background: var(--cream);
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+}
+
+.printable-sticker {
+  position: absolute;
+  bottom: 12%;
+  left: -8%;
+  background: var(--gold);
+  color: var(--paper);
+  padding: 0.6rem 1rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transform: rotate(-6deg);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(184, 137, 58, 0.3);
+}
+
+/* ==================== SECTIONS ==================== */
+section {
+  padding: 7rem 3rem;
+  position: relative;
+}
+
+.section-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-eyebrow::before {
+  content: '✦';
+  color: var(--gold);
+}
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+  max-width: 28ch;
+}
+
+h2 em {
+  font-style: italic;
+  color: var(--burgundy);
+  font-weight: 300;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 38rem;
+  margin-bottom: 4rem;
+  line-height: 1.65;
+}
+
+/* ==================== WHY SECTION ==================== */
+.why {
+  background: var(--paper);
+  border-top: 1px solid rgba(42, 26, 20, 0.08);
+  border-bottom: 1px solid rgba(42, 26, 20, 0.08);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.why-card {
+  padding: 2.5rem 2rem;
+  background: var(--cream);
+  border-radius: 4px;
+  border: 1px solid rgba(42, 26, 20, 0.08);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(42, 26, 20, 0.08);
+  border-color: var(--burgundy);
+}
+
+.why-card .num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: var(--burgundy);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.why-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.why-card p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==================== SAMPLE QUESTIONS ==================== */
+.questions {
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.questions-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.questions-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.q-row {
+  display: flex;
+  gap: 1.2rem;
+  white-space: nowrap;
+  animation: scroll-left 50s linear infinite;
+}
+
+.q-row.reverse {
+  animation: scroll-right 55s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.q-card {
+  flex-shrink: 0;
+  background: var(--paper);
+  border: 1px solid rgba(42, 26, 20, 0.1);
+  padding: 1.4rem 1.8rem;
+  border-radius: 4px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink);
+  max-width: 32rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.q-card:hover {
+  border-color: var(--burgundy);
+  background: var(--cream-deep);
+}
+
+.q-card .q-num {
+  font-style: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-right: 0.8rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.q-card.featured {
+  background: var(--burgundy);
+  color: var(--cream);
+  border-color: var(--burgundy);
+}
+.q-card.featured .q-num { color: var(--blush); }
+
+/* ==================== INSIDE THE BOOK ==================== */
+.inside {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+}
+
+.inside-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.chapter-list {
+  list-style: none;
+}
+
+.chapter-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(42, 26, 20, 0.12);
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.chapter-list li:hover {
+  padding-left: 1rem;
+  border-color: var(--burgundy);
+}
+
+.chapter-list li:first-child { border-top: 1px solid rgba(42, 26, 20, 0.12); }
+
+.ch-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--burgundy);
+  font-weight: 300;
+}
+
+.ch-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.ch-title small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+
+.ch-count {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.1em;
+}
+
+/* Sample page preview */
+.page-preview {
+  background: var(--paper);
+  border-radius: 4px;
+  box-shadow:
+    0 30px 60px rgba(42, 26, 20, 0.15),
+    0 0 0 1px rgba(42, 26, 20, 0.08);
+  padding: 3rem 2.5rem;
+  position: relative;
+  transform: rotate(-1.5deg);
+  transition: transform 0.5s ease;
+  aspect-ratio: 8.5 / 11;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.page-preview:hover { transform: rotate(0deg) scale(1.02); }
+
+.page-preview::before {
+  content: '';
+  position: absolute;
+  inset: 1.5rem;
+  border: 1px solid rgba(42, 26, 20, 0.1);
+  pointer-events: none;
+}
+
+.page-header {
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(42, 26, 20, 0.15);
+}
+
+.page-day {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+}
+
+.page-q {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.page-prompt {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  line-height: 1.6;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(42, 26, 20, 0.2);
+}
+
+.page-foot {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.page-foot .ornament-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-foot .ornament-line::before,
+.page-foot .ornament-line::after {
+  content: '';
+  width: 2rem;
+  height: 1px;
+  background: var(--ink-soft);
+}
+
+/* ==================== TESTIMONIALS ==================== */
+.testimonials {
+  background: var(--ink);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(194, 90, 58, 0.15), transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(122, 35, 49, 0.2), transparent 50%);
+}
+
+.testimonials .section-eyebrow { color: var(--blush); }
+.testimonials h2 { color: var(--cream); }
+.testimonials h2 em { color: var(--blush); }
+.testimonials .section-intro { color: rgba(246, 239, 228, 0.7); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.testimonial {
+  background: rgba(246, 239, 228, 0.05);
+  border: 1px solid rgba(246, 239, 228, 0.1);
+  padding: 2.5rem;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.testimonial:hover {
+  background: rgba(246, 239, 228, 0.08);
+  border-color: var(--blush);
+  transform: translateY(-4px);
+}
+
+.stars {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+}
+
+.testimonial .quote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.55;
+  margin-bottom: 2rem;
+  color: var(--cream);
+}
+
+.testimonial .quote::before {
+  content: '“';
+  font-size: 3rem;
+  color: var(--burgundy);
+  line-height: 0;
+  position: relative;
+  top: 0.5rem;
+  margin-right: 0.3rem;
+  font-family: 'Fraunces', serif;
+}
+
+.attrib {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(246, 239, 228, 0.1);
+}
+
+.avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--burgundy), var(--rust));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.attrib-text { font-size: 0.9rem; }
+.attrib-text strong { display: block; font-weight: 500; }
+.attrib-text small { color: rgba(246, 239, 228, 0.6); font-size: 0.8rem; }
+
+/* ==================== PRICING ==================== */
+.pricing {
+  background: var(--cream);
+  text-align: center;
+}
+
+.pricing-inner { max-width: 800px; margin: 0 auto; }
+.pricing h2 { margin-left: auto; margin-right: auto; }
+
+.pricing-card {
+  background: var(--paper);
+  border: 1px solid rgba(42, 26, 20, 0.12);
+  border-radius: 8px;
+  padding: 4rem 3rem;
+  margin-top: 4rem;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(42, 26, 20, 0.06);
+}
+
+.price-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 0.5rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.price-old {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  color: var(--ink-soft);
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.price {
+  font-family: 'Fraunces', serif;
+  font-size: 5rem;
+  color: var(--burgundy);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.price-cents {
+  font-size: 2rem;
+  vertical-align: top;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.price-note {
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.includes {
+  text-align: left;
+  max-width: 28rem;
+  margin: 0 auto 2.5rem;
+}
+
+.includes li {
+  list-style: none;
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: start;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-bottom: 1px solid rgba(42, 26, 20, 0.06);
+}
+
+.includes li::before {
+  content: '✓';
+  color: var(--burgundy);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.includes li strong { color: var(--burgundy); }
+
+.btn-massive {
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 1.4rem 3rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 15px 40px var(--shadow);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn-massive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(122, 35, 49, 0.3);
+  background: var(--burgundy-deep);
+}
+
+.trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  flex-wrap: wrap;
+}
+
+.trust-row span { display: flex; align-items: center; gap: 0.4rem; }
+.trust-row span::before { content: '✦'; color: var(--gold); }
+
+/* Gumroad embed styling */
+.gumroad-embed-wrap {
+  margin: 1rem auto 0;
+  max-width: 520px;
+  min-height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(122, 35, 49, 0.15);
+  border: 1px solid rgba(42, 26, 20, 0.1);
+  background: var(--cream);
+}
+
+.gumroad-embed-wrap .gumroad-product-embed {
+  width: 100%;
+}
+
+.gumroad-embed-wrap .gumroad-product-embed iframe,
+.gumroad-embed-wrap iframe {
+  width: 100% !important;
+  border: none !important;
+  display: block;
+}
+
+.gumroad-embed-wrap a {
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-style: italic;
+}
+
+/* ==================== FAQ ==================== */
+.faq {
+  background: var(--paper);
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(42, 26, 20, 0.12);
+}
+
+.faq-item summary {
+  padding: 1.8rem 0;
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.3s ease;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--burgundy); }
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--burgundy);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after { transform: rotate(45deg); }
+
+.faq-item p {
+  padding: 0 0 1.8rem;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+/* ==================== FINAL CTA ==================== */
+.final-cta {
+  background: var(--burgundy);
+  color: var(--cream);
+  text-align: center;
+  padding: 8rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(232, 184, 168, 0.15), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(184, 137, 58, 0.1), transparent 50%);
+}
+
+.final-cta h2 {
+  color: var(--cream);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.final-cta h2 em {
+  color: var(--blush);
+}
+
+.final-cta p {
+  color: rgba(246, 239, 228, 0.85);
+  font-size: 1.15rem;
+  max-width: 38rem;
+  margin: 0 auto 3rem;
+  position: relative;
+}
+
+.final-cta .btn-massive {
+  background: var(--cream);
+  color: var(--burgundy);
+  position: relative;
+}
+
+.final-cta .btn-massive:hover {
+  background: var(--paper);
+  color: var(--burgundy-deep);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background: var(--ink);
+  color: rgba(246, 239, 228, 0.6);
+  padding: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+footer .logo { color: var(--blush); margin-bottom: 1rem; display: inline-block; }
+footer .logo span { background: var(--rust); }
+
+/* ==================== ANIMATIONS ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
+  nav { padding: 0.5rem 1rem; }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 1.5rem 4rem;
+    gap: 3rem;
+  }
+  .book-stage { min-height: 500px; }
+  section { padding: 5rem 1.5rem; }
+  .why-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .inside-grid, .questions-header { grid-template-columns: 1fr; gap: 3rem; }
+  .pricing-card { padding: 3rem 1.5rem; }
+  .price { font-size: 4rem; }
+  h2 { font-size: 2.2rem; }
+  .hero-meta { flex-wrap: wrap; gap: 1.5rem; }
+}
+
+@media (max-width: 500px) {
+  .book { width: 200px; height: 420px; }
+  .cover-mid .number { font-size: 1.3rem; }
+  .phone-list-item .chapter { font-size: 0.7rem; }
+  .nav-cta { padding: 0.45rem 0.85rem; font-size: 0.7rem; }
+  .logo { font-size: 0.95rem; }
+}
 </style>
 </head>
 <body>
+<div class="container">
 
-<div class="splash" id="splash">
-  <div class="splash-eyebrow">A year of closer</div>
-  <div class="splash-mark">Deeper <em>Dating</em></div>
-</div>
+<!-- ==================== NAV ==================== -->
+<nav>
+  <div class="logo">Your Connection Year</div>
+  <a href="https://datelabs.gumroad.com/l/ebook" class="nav-cta" data-gumroad-overlay-checkout="true">Get the App → $9.99</a>
+</nav>
 
-<div class="app">
-  <header class="header">
-    <div class="header-spacer"></div>
-    <div class="header-center">
-      <p class="eyebrow">A year of closer</p>
-      <h1 class="wordmark">Deeper <em>Dating</em></h1>
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow reveal">An app for couples · 365 questions</div>
+    <h1 class="reveal">
+      Stop having the <em>same</em> conversations.<br>
+      Start <span class="accent">actually</span><br>
+      knowing each other.
+    </h1>
+    <p class="hero-sub reveal">
+      One question a day for a year. Designed by relationship coaches to take you past small talk and into the kind of intimacy you thought only happened in movies. Open it on the couch, on a date, or before bed.
+    </p>
+    <div class="hero-cta-group reveal">
+      <a href="#buy" class="btn-primary">
+        <span>Get the App — $9.99</span>
+        <span class="arrow">→</span>
+      </a>
+      <div class="guarantee">Hate it? Email us, we'll refund you · One-time payment</div>
     </div>
-    <button class="mode-toggle" id="mode-toggle" aria-label="Toggle dark mode"></button>
-  </header>
-
-  <main class="content" id="content"></main>
-
-  <div class="tabs-wrap">
-  <nav class="tabs">
-    <button data-tab="browse" class="tab-btn">
-      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-      <span>Browse</span>
-    </button>
-    <button data-tab="daily" class="tab-btn">
-      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-      <span>Daily</span>
-    </button>
-    <button data-tab="bookmarks" class="tab-btn">
-      <span id="saved-tab-icon"></span>
-      <span>Saved</span>
-    </button>
-  </nav>
+    <div class="hero-meta reveal">
+      <div class="meta-item">
+        <span class="num">365</span>
+        <span class="label">Questions</span>
+      </div>
+      <div class="meta-item">
+        <span class="num">15</span>
+        <span class="label">Themed Chapters</span>
+      </div>
+      <div class="meta-item">
+        <span class="num">App</span>
+        <span class="label">Instant Access</span>
+      </div>
+    </div>
   </div>
+
+  <div class="book-stage reveal">
+    <div class="book-glow"></div>
+    <div class="book-tag">Open anywhere ✿</div>
+    <div class="printable-sticker">★ Instant access</div>
+    <div class="book">
+      <div class="book-cover">
+        <div class="cover-top">A Year of Closer</div>
+        <div class="cover-mid">
+          <div class="number">Deeper <em>Dating</em></div>
+        </div>
+        <div class="phone-list">
+          <div class="phone-list-item">
+            <span class="roman">I.</span>
+            <span class="chapter">First Meeting<small>What you saw, what you sensed</small></span>
+            <span class="range">001–020</span>
+          </div>
+          <div class="phone-list-item">
+            <span class="roman">II.</span>
+            <span class="chapter">Origins &amp; Family<small>The house you came from</small></span>
+            <span class="range">021–045</span>
+          </div>
+          <div class="phone-list-item">
+            <span class="roman">III.</span>
+            <span class="chapter">Values &amp; Worldview<small>What you actually believe</small></span>
+            <span class="range">046–070</span>
+          </div>
+          <div class="phone-list-item">
+            <span class="roman">IV.</span>
+            <span class="chapter">Communication &amp; Conflict<small>How you fight, how you repair</small></span>
+            <span class="range">071–100</span>
+          </div>
+          <div class="phone-list-item">
+            <span class="roman">V.</span>
+            <span class="chapter">Love Languages<small>How love actually arrives</small></span>
+            <span class="range">101–120</span>
+          </div>
+          <div class="phone-list-item">
+            <span class="roman">VI.</span>
+            <span class="chapter">Sex &amp; Intimacy<small>Bodies, desire, the unsaid</small></span>
+            <span class="range">121–150</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY SECTION ==================== -->
+<section class="why">
+  <div class="section-eyebrow reveal">Why this app exists</div>
+  <h2 class="reveal">Most couples run out of things to talk about by <em>month three.</em></h2>
+  <p class="section-intro reveal">
+    Not because the love is gone — because nobody ever taught us how to ask better questions. This app is the cure for "how was your day."
+  </p>
+
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <span class="num">01</span>
+      <h3>Designed in sequence</h3>
+      <p>Questions get gently deeper week by week. By day 90, you'll be asking things you've never asked anyone — including yourself.</p>
+    </div>
+    <div class="why-card reveal">
+      <span class="num">02</span>
+      <h3>Works on any date</h3>
+      <p>First date jitters. Year-seven plateau. Long-distance video calls. The format adapts to wherever you are with whoever you're with.</p>
+    </div>
+    <div class="why-card reveal">
+      <span class="num">03</span>
+      <h3>In your pocket, always</h3>
+      <p>Open the app on the couch, at dinner, on a walk, before bed. Save the ones that hit hardest. Come back to them next year. No login friction, no clutter — just you, them, and the next question.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SAMPLE QUESTIONS ==================== -->
+<section class="questions">
+  <div class="questions-header">
+    <div>
+      <div class="section-eyebrow reveal">A peek inside</div>
+      <h2 class="reveal">The kind of questions that <em>change</em> a relationship.</h2>
+    </div>
+    <p class="section-intro reveal" style="margin-bottom: 0;">
+      Not "what's your favorite color." We're talking the prompts that make someone pause, lean in, and tell you something true.
+    </p>
+  </div>
+
+  <div class="questions-marquee">
+    <div class="q-row">
+      <div class="q-card"><span class="q-num">No. 003</span>What is a quiet dealbreaker most people do not know about you?</div>
+      <div class="q-card featured"><span class="q-num">No. 088</span>When did you last cry — and what was it really about?</div>
+      <div class="q-card"><span class="q-num">No. 098</span>What did you have to hide to belong in your family?</div>
+      <div class="q-card"><span class="q-num">No. 142</span>Could you be with someone who voted opposite to you?</div>
+      <div class="q-card"><span class="q-num">No. 241</span>What does monogamy actually mean to you?</div>
+      <!-- duplicate for seamless loop -->
+      <div class="q-card"><span class="q-num">No. 003</span>What is a quiet dealbreaker most people do not know about you?</div>
+      <div class="q-card featured"><span class="q-num">No. 088</span>When did you last cry — and what was it really about?</div>
+      <div class="q-card"><span class="q-num">No. 098</span>What did you have to hide to belong in your family?</div>
+      <div class="q-card"><span class="q-num">No. 142</span>Could you be with someone who voted opposite to you?</div>
+      <div class="q-card"><span class="q-num">No. 241</span>What does monogamy actually mean to you?</div>
+    </div>
+    <div class="q-row reverse">
+      <div class="q-card"><span class="q-num">No. 014</span>What's a compliment you've never been given but wish you had?</div>
+      <div class="q-card"><span class="q-num">No. 175</span>What's something I do that you've never told me you love?</div>
+      <div class="q-card featured"><span class="q-num">No. 238</span>What is the difference between feeling desired and feeling used?</div>
+      <div class="q-card"><span class="q-num">No. 257</span>What does your inner voice sound like when no one's listening?</div>
+      <div class="q-card"><span class="q-num">No. 322</span>What part of yourself do you hope I never see?</div>
+      <!-- duplicate -->
+      <div class="q-card"><span class="q-num">No. 014</span>What's a compliment you've never been given but wish you had?</div>
+      <div class="q-card"><span class="q-num">No. 175</span>What's something I do that you've never told me you love?</div>
+      <div class="q-card featured"><span class="q-num">No. 238</span>What is the difference between feeling desired and feeling used?</div>
+      <div class="q-card"><span class="q-num">No. 257</span>What does your inner voice sound like when no one's listening?</div>
+      <div class="q-card"><span class="q-num">No. 322</span>What part of yourself do you hope I never see?</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INSIDE THE APP ==================== -->
+<section class="inside">
+  <div class="inside-grid">
+    <div>
+      <div class="section-eyebrow reveal">Inside the app</div>
+      <h2 class="reveal">Fifteen chapters. <em>One year.</em> A relationship transformed.</h2>
+      <p class="section-intro reveal" style="margin-bottom: 2rem;">
+        Each chapter explores a different territory of intimacy — from first dates, to family, to fidelity, to the future.
+      </p>
+      <ol class="chapter-list reveal">
+        <li><span class="ch-num">I</span><span class="ch-title">First Dates<small>What you would notice in the first five</small></span><span class="ch-count">20 Qs</span></li>
+        <li><span class="ch-num">II</span><span class="ch-title">How You Communicate<small>Texting, talking, fighting</small></span><span class="ch-count">25 Qs</span></li>
+        <li><span class="ch-num">III</span><span class="ch-title">How You Speak<small>Tone, words, and the way you sound</small></span><span class="ch-count">20 Qs</span></li>
+        <li><span class="ch-num">IV</span><span class="ch-title">Your Past<small>The relationships you came in with</small></span><span class="ch-count">20 Qs</span></li>
+        <li><span class="ch-num">V</span><span class="ch-title">Family You Came From<small>The first people who taught you about love</small></span><span class="ch-count">25 Qs</span></li>
+        <li><span class="ch-num">…</span><span class="ch-title">Plus 10 more chapters<small>Habits · Politics · Religion · Money · Sex · Fidelity · Friends · Career · Kids · Marriage</small></span><span class="ch-count">255 Qs</span></li>
+      </ol>
+    </div>
+
+    <div class="page-preview reveal">
+      <div class="page-header">A Year of Closer · Vol. I</div>
+      <div class="page-day">Question No. 088</div>
+      <div class="page-q">When did you last cry — and what was it really about?</div>
+      <div class="page-prompt">
+        Before you answer: take a breath. There's no right way to cry. Try to look past the surface — was it the song, the headline, the missed call? Or something older underneath it?
+      </div>
+      <div class="page-foot">
+        <div class="ornament-line">✦</div>
+        <div>Chapter III · Tender Spots</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="testimonials">
+  <div class="section-eyebrow reveal">Real couples, real shifts</div>
+  <h2 class="reveal">"It felt like we were <em>dating again</em> — but as the people we actually are now."</h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">We open it together every morning with coffee — one question, no rules. Six months in and I've learned more about him than in our previous two years combined.</p>
+      <div class="attrib">
+        <div class="avatar">M</div>
+        <div class="attrib-text">
+          <strong>Mara &amp; Theo</strong>
+          <small>Together 4 years · Portland</small>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">I'm a therapist. I bought this thinking I'd find it cheesy. I was wrong. The sequencing is genuinely thoughtful and I now recommend it to clients in long-term partnerships.</p>
+      <div class="attrib">
+        <div class="avatar">D</div>
+        <div class="attrib-text">
+          <strong>Dr. Lena P.</strong>
+          <small>Couples Therapist · Brooklyn</small>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="quote">My partner is long-distance. We do one question per FaceTime. It's the only thing that's made the distance feel less like distance and more like a slow unraveling toward each other.</p>
+      <div class="attrib">
+        <div class="avatar">S</div>
+        <div class="attrib-text">
+          <strong>Sami K.</strong>
+          <small>Together 11 months · Berlin / NYC</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRICING ==================== -->
+<section class="pricing" id="buy">
+  <div class="pricing-inner">
+    <div class="section-eyebrow reveal" style="justify-content: center;">Launch pricing · One-time payment</div>
+    <h2 class="reveal"><em>$9.99</em> once. The conversations are <em>free</em> forever.</h2>
+
+    <div class="pricing-card reveal">
+      <div class="price-badge">Launch Pricing — 80% Off</div>
+
+      <div class="price-row">
+        <span class="price-old">$49</span>
+        <div class="price">$9<span class="price-cents">.99</span></div>
+      </div>
+      <p class="price-note">One-time payment · Instant app access · Yours forever</p>
+
+      <ul class="includes">
+        <li><span><strong>365 sequenced questions</strong> across 15 themed chapters</span></li>
+        <li><span><strong>Works on any device</strong> — phone, tablet, laptop, browser</span></li>
+        <li><span><strong>Save favorites &amp; come back</strong> — bookmark the ones that hit hardest</span></li>
+        <li><span><strong>Bonus: 50 "rescue" prompts</strong> for hard conversations</span></li>
+        <li><span><strong>Lifetime access</strong> — sign in any time, free updates forever</span></li>
+        <li><span><strong>Hate it? We'll refund you.</strong> Just email us — no forms, no questions</span></li>
+      </ul>
+
+      <a href="https://datelabs.gumroad.com/l/ebook" class="btn-massive" data-gumroad-overlay-checkout="true">
+        Get the App — $9.99 →
+      </a>
+
+      <div class="trust-row">
+        <span>Instant access</span>
+        <span>Secure checkout</span>
+        <span>Refund if you hate it</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div class="section-eyebrow reveal">Questions before the questions</div>
+    <h2 class="reveal">Things people <em>often</em> ask.</h2>
+  </div>
+
+  <div class="faq-grid">
+    <details class="faq-item" open>
+      <summary>How does the app work?</summary>
+      <p>After purchase, you get instant access to the app in your browser — no install needed, works on phone, tablet, or laptop. Open it together, swipe through questions by chapter, save the ones you want to come back to. Sign in any time on any device.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I have to do exactly one a day?</summary>
+      <p>Absolutely not. Some couples open it together every morning with coffee. Others save it for weekly date nights. Some pull a random question when things feel stuck. The structure is a gift, not a rule.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is this for new couples or long-term partners?</summary>
+      <p>Both. The app opens with lighter, getting-to-know-you questions and gradually moves into deeper territory. New couples build a foundation; long-term partners rediscover each other. Same questions, different journeys.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do we both need to buy it?</summary>
+      <p>Nope — one purchase, two people. Open it on a shared device, or sign in from each of your phones. The whole point is doing it together.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Would this work as a gift?</summary>
+      <p>It's one of the most-given gifts in this category — for anniversaries, engagements, wedding showers, and Valentine's Day. You can send access directly to someone with a personal note.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="final-cta">
+  <h2 class="reveal">One year from now, you'll know each other in ways most couples <em>never</em> will.</h2>
+  <p class="reveal">Or — you'll keep talking about the weather and your day. $9.99 once. The version of your relationship on the other side of this app is priceless.</p>
+  <a href="https://datelabs.gumroad.com/l/ebook" class="btn-massive reveal" data-gumroad-overlay-checkout="true">
+    Get the App — $9.99 →
+  </a>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="logo">Your Connection Year</div>
+  <p>© 2026 Your Connection Year · Made with care for people who actually want to be known.</p>
+</footer>
+
 </div>
 
 <script>
-// Questions data — exported via window.DD_DATA
-window.DD_DATA = {
-  SECTIONS: [
-    { id: 1, roman: "I", title: "First Meeting & Early Curiosity", subtitle: "What you saw, what you sensed", start: 1, end: 20 },
-    { id: 2, roman: "II", title: "Origins & Family of Origin", subtitle: "The house you came from", start: 21, end: 45 },
-    { id: 3, roman: "III", title: "Values & Worldview", subtitle: "What you actually believe", start: 46, end: 70 },
-    { id: 4, roman: "IV", title: "Communication & Conflict", subtitle: "How you fight, how you repair", start: 71, end: 100 },
-    { id: 5, roman: "V", title: "Love Languages & Affection", subtitle: "How love actually arrives", start: 101, end: 120 },
-    { id: 6, roman: "VI", title: "Sex & Physical Intimacy", subtitle: "Bodies, desire, the unsaid", start: 121, end: 150 },
-    { id: 7, roman: "VII", title: "Monogamy, Boundaries & Fidelity", subtitle: "The agreement, in writing", start: 151, end: 170 },
-    { id: 8, roman: "VIII", title: "Money & Finance", subtitle: "Numbers, stories, the future you can afford", start: 171, end: 200 },
-    { id: 9, roman: "IX", title: "Lifestyle & Time Together", subtitle: "The texture of an ordinary week", start: 201, end: 225 },
-    { id: 10, roman: "X", title: "Career & Ambition", subtitle: "Work, identity, and what you're chasing", start: 226, end: 245 },
-    { id: 11, roman: "XI", title: "Children & Parenting", subtitle: "The biggest yes-or-no, broken open", start: 246, end: 275 },
-    { id: 12, roman: "XII", title: "Health, Body & Mortality", subtitle: "The body you live in, the one you'll grow old in", start: 276, end: 295 },
-    { id: 13, roman: "XIII", title: "Friendships, Family & Social Life", subtitle: "The other people in the room", start: 296, end: 320 },
-    { id: 14, roman: "XIV", title: "Spirituality, Meaning & Purpose", subtitle: "What it's all for", start: 321, end: 340 },
-    { id: 15, roman: "XV", title: "The Future Together", subtitle: "The life you're imagining, said out loud", start: 341, end: 365 }
-  ],
-  Q: {1:"What's the first thing you noticed about me?",2:"When you decide to keep dating someone, what's usually there \u2014 and what was missing from the ones you didn't?",3:"Tell me about a time you ignored your gut about someone. What did it know?",4:"What do you perform on the first few dates? When does the real you show up?",5:"What wouldn't naturally come up in casual talk \u2014 but you'd want a serious partner to know?",6:"Have you mentioned me to anyone in your life yet? What did you say?",7:"What's a question you've wanted to ask me but haven't?",8:"Six months from now, what scene do you picture us in?",9:"What did you assume about me that turned out wrong? What turned out right?",10:"Have you ever ended things with someone you really liked over timing? What did you learn?",11:"What changes in your behavior when you're falling for someone?",12:"Chemistry vs. compatibility \u2014 which have you mistaken for the other?",13:"What have you done this time around that you don't usually do this early?",14:"When you tell your best friend about a date, what's the part you most want to say?",15:"What story do you tell new people about your life, and why that one?",16:"What would make you trust me faster? What would slow it down?",17:"Do you picture a long-term partner who feels familiar, or new? What does that say about who you're looking for?",18:"What's a way I've already surprised you \u2014 good or bad?",19:"What does it mean to actually be chosen, beyond being liked?",20:"If this didn't go the distance, what would you want to have gotten out of it anyway?",21:"What's a family rule you didn't realize was a rule until you left?",22:"Which parent did you most want approval from? How does that show up now?",23:"How did the adults in your house handle small daily conflict?",24:"Whose love did you earn? Whose came easy? What did each teach you?",25:"What was assumed about you that you've quietly never agreed with?",26:"Describe a typical Sunday growing up. What should our Sundays feel like?",27:"What did your family do well that you'd bring forward?",28:"What would you actively leave behind?",29:"Who in your extended family do I need to understand to understand you?",30:"What did money feel like in your house \u2014 anxious, abundant, secret, fought-over?",31:"How did physical affection work in your family \u2014 and how does that shape what you need now?",32:"What did you learn about being a man/woman/person from watching the adults?",33:"What was your role \u2014 peacemaker, achiever, scapegoat, golden child? When does it still come out?",34:"What are you still carrying from your parents' marriage (or its absence)?",35:"What did your parents get right about love that you'd want to copy?",36:"Tell me about a childhood moment when you felt deeply seen.",37:"Tell me about one when you felt deeply unseen.",38:"What topic was off-limits in your house? What's your relationship to it now?",39:"How did your family talk about \u2014 or avoid \u2014 sex and bodies?",40:"Who was a parent to you who wasn't actually one?",41:"What did you have to be to belong in your family? What did you hide?",42:"When you go home now, who do you become? How long to shake it off?",43:"What pattern are your siblings or cousins repeating? Where do you see yourself?",44:"If your parents could honestly answer one question about how they raised you, what?",45:"What's a piece of family lore you've come to question?",46:"What value of yours has cost you something? Would you choose it again?",47:"How do I tell whether something is a value, or just an opinion you hold loudly?",48:"What did you believe five years ago that you no longer do? What changed it?",49:"Where do you get your moral information \u2014 who do you check yourself against?",50:"What does your circle agree on that you privately don't?",51:"What do you owe other people just for being human? What do they have to earn?",52:"Kind or honest \u2014 describe a time you had to pick. Would you pick the same now?",53:"What did you used to be loud about and have gotten quieter on?",54:"What does integrity look like in your unwitnessed moments?",55:"When you disagree with someone you love about something big, what do you do?",56:"What privilege have you come to recognize? How does it shape what you owe?",57:"Who do you have more compassion for now than you used to? What changed?",58:"When do you speak up about injustice and when do you stay quiet?",59:"What's a rule you live by that you've never said out loud?",60:"What opinion would you be embarrassed to defend in public, but still hold?",61:"Whose life \u2014 alive, dead, anonymous \u2014 do you secretly want yours to look like?",62:"What question about how to live have you been chewing on for years?",63:"What does a good life look like in ordinary detail \u2014 not the highlight reel?",64:"What's most embarrassing about how our generation lives? What's your role in it?",65:"What kind of person do you want to be \u2014 and how often do you actually are?",66:"What kind of suffering is meaningful? What's just suffering?",67:"Where are your values and your behavior most out of sync?",68:"What's a worldview difference between us you've already noticed?",69:"If you had to give a kid one principle, what? Do you live by it?",70:"What would you refuse to do for any money? What have you done you wouldn't tell most?",71:"What's the difference for you between being told something hard and being criticized?",72:"When you go quiet in a fight, what are you actually doing in there?",73:"How did the people who raised you fight? How do you find yourself fighting now?",74:"When you're upset with me, what do you need first \u2014 heard, reassured, held, or alone?",75:"What's a phrase a past partner used that still lands hard?",76:"How do you know you've forgiven someone vs. just stopped bringing it up?",77:"What do you do with anger you don't feel safe expressing? Where does it go?",78:"When you've hurt someone, what does a real apology from you sound like?",79:"What's your earliest memory of being told your feelings were too much?",80:"What feedback lands well with you? What makes you defensive even when it's true?",81:"When I bring up something bothering me, what helps most in the first sixty seconds?",82:"What recurring fight have you had with past partners? What was it really about?",83:"How do you tell if a partner is struggling vs. mistreating you?",84:"What have you never told a partner because you feared the reaction?",85:"Do you need resolution before you can be close again, or can closeness come first?",86:"What subject are you avoiding in your life right now? What would help you face it?",87:"How do you ask for more without making someone feel like they're failing?",88:"When someone compliments you, what happens in your body?",89:"What's the lie you're most likely to tell to keep the peace? What does it cost?",90:"Tell me about a conflict you handled well. What worked?",91:"Shutting down vs. processing quietly \u2014 how do I tell which one is happening?",92:"What conversation have you been waiting your whole life to have with a partner?",93:"What does the morning after a fight need to look like for you?",94:"When you bring up something hard with me, what's your fear about my reaction?",95:"What do you do when you realize mid-argument you're wrong?",96:"What topic should I never tease you about? Where does teasing actually feel like love?",97:"How much of your daily mood do you want me to see vs. handle alone first?",98:"When my mood is bad and it's not about you \u2014 engage, give space, ask, distract?",99:"What pattern do you notice in how you handle conflict that you'd want to name before it gets baked in?",100:"If a couple had the same fight five times, what should they do the sixth?",101:"What makes you feel deeply loved that you've never said because it sounds small?",102:"As a kid, how did you know you were loved? What signals are you still scanning for?",103:"What affection do you crave but rarely ask for? Why don't you ask?",104:"When I do something thoughtful, how do you want me to know you noticed?",105:"Appreciated vs. truly known \u2014 what's the difference for you?",106:"How do you most naturally show love? What's the risk it gets missed?",107:"What gesture from a past partner meant the most? What about it landed?",108:"How much non-sexual touch do you need in a week to feel connected?",109:"Me reaching for your hand vs. you reaching for mine \u2014 do those feel different?",110:"When you're stressed \u2014 held, talked to, distracted, or left alone?",111:"What do I do that you quietly count as love that I might not know about?",112:"What's the most romantic thing that's ever happened to you?",113:"How do you want to be greeted when you walk in the door?",114:"What public affection feels right? What feels like too much?",115:"What kind of words move you \u2014 written, spoken, offhand, formal?",116:"When was the last time you felt truly cherished? What was the person doing?",117:"What do people misunderstand about your need for closeness or space?",118:"What does it take for you to receive love rather than perform for it?",119:"How do you want to be loved at your worst \u2014 sick, ashamed, failing, unkind?",120:"What could I start tomorrow that would make you feel more loved by Friday?",121:"What does desire feel like in your body?",122:"Wanting sex vs. wanting closeness \u2014 how do you tell them apart?",123:"When in your life have you felt most alive in your body?",124:"What did you learn about sex growing up that you've had to unlearn?",125:"Sex you remember fondly vs. sex you remember as great \u2014 what made the great ones great?",126:"What turns you on that has nothing to do with what's happening physically?",127:"What have you wanted to try but never told a partner? What stopped you?",128:"How do you want to be initiated with? How do you want to initiate?",129:"Feeling desired vs. feeling used \u2014 how do you tell which is happening?",130:"How do you feel about your body right now? How does that shape how you show up sexually?",131:"What kind of non-sexual touch do you love?",132:"When you don't want sex, what should I do with my own desire?",133:"What's the most vulnerable part of sex for you?",134:"What's a fantasy you have that you're not sure you'd want in real life?",135:"How important is sexual frequency? What's a \u201Cgood week\u201D to you?",136:"What's the role of sex for you here \u2014 bonding, play, release, expression?",137:"How do you feel about porn? What's your history with it?",138:"What's something a past partner did that you've never asked anyone else for?",139:"Giving vs. receiving \u2014 any imbalance you'd want to notice?",140:"What does aftercare look like for you?",141:"How do you want me to bring up sex outside the bedroom?",142:"Any sexual dealbreaker I should know now, not later?",143:"When sex isn't working with a partner, how do you want to talk about it?",144:"How does stress affect your desire? What should I read into it?",145:"Novelty or familiarity \u2014 what do you want more of?",146:"Kink, power dynamics, that whole spectrum \u2014 how do you feel about it?",147:"Is there a sexual experience you'd want to share with a long-term partner?",148:"Any experience that shaped your relationship to sex that I should know?",149:"What does being seen naked by someone mean to you?",150:"If your sex life is still amazing in year ten of a relationship, what did the two people do to keep it that way?",151:"What does monogamy actually mean to you \u2014 where are the lines?",152:"What kind of outside attention would you want a partner to tell you about? What would you rather not know?",153:"What counts as cheating to you? Is there a version that's more than sex?",154:"Have you been cheated on? What does that ask of a future partner?",155:"Have you cheated? What did it teach you about yourself?",156:"How do you feel about close friendships with people you could plausibly be attracted to?",157:"Privacy vs. secrecy in a relationship \u2014 where's your line?",158:"If a partner had feelings for someone else and wasn't acting on it, how would you want them to handle it?",159:"Any version of non-monogamy open to you? What would need to be true to discuss it?",160:"Tell me about a fantasy involving someone else.",161:"What boundary have you struggled to hold? What made it hard?",162:"Phones, social media, DMs \u2014 rules feel safe or controlling?",163:"What does jealousy feel like in your body? What's it usually trying to tell you?",164:"When jealous, what do you want \u2014 reassurance, distance, transparency, change?",165:"What's a way a partner should never make you jealous on purpose?",166:"What contact with exes feels okay? What doesn't?",167:"Attraction to other people is going to happen. How should a couple handle it?",168:"What's a betrayal that wouldn't be obvious to a stranger but would gut you?",169:"What kind of broken trust could be rebuilt? What couldn't?",170:"What promise would you want a couple to make about temptation when it comes?",171:"What's the first thing you remember learning about money? From whom?",172:"How much is \u201Cenough\u201D? How would you actually know if you got there?",173:"What does financial security feel like in your body?",174:"What's a financial decision you're proud of? One you wish you could undo?",175:"How much debt do you have, of what kind, and how do you feel about it?",176:"What's your honest credit situation?",177:"What were you taught about people who have a lot of money and people who don't?",178:"What's your relationship to spending money on yourself? Where does guilt show up?",179:"Combined finances, separate, or hybrid \u2014 and why?",180:"If one partner out-earns the other long-term, how should that be handled?",181:"What does \u201Cfair\u201D look like when incomes are very different?",182:"What money habit wouldn't you want a partner to talk you out of?",183:"What money habit would you actually want help changing?",184:"Lending money to family, bailing people out \u2014 where do you sit?",185:"What's the most you'd spend without checking in? What number would feel like a betrayal?",186:"How should a couple handle gifts \u2014 for each other, friends, occasions?",187:"Your honest budgeting style: track, ignore, panic, optimize?",188:"How risk-tolerant are you with money?",189:"How do you want to save for retirement? How on track do you feel?",190:"Own or rent \u2014 how attached are you to the dream?",191:"How do you feel about a prenup, in either direction?",192:"What lifestyle would you want to build toward \u2014 modest and free, comfortable, ambitious?",193:"How would you want a couple to handle a major setback \u2014 job loss, medical bill, market crash?",194:"What purchases have you regretted? What does the pattern say?",195:"Money at the dinner table \u2014 openly discussed, lightly touched, not at all?",196:"What's the most generous thing you've done with money?",197:"How much does inheritance or leaving money matter to you?",198:"Windfall tomorrow \u2014 first thing you'd want to do with a partner?",199:"Lost it all tomorrow \u2014 what would you want to protect first?",200:"What's the money story you've been telling yourself your whole life?",201:"How much time alone in a week do you need to feel like yourself?",202:"Your ideal Saturday, in actual detail \u2014 waking to sleeping?",203:"What kind of weeknights do you want \u2014 quiet and parallel, conversational, social, productive?",204:"What daily ritual would you want with a partner that you've never had?",205:"What ritual from a past relationship should be approached carefully again?",206:"Working from home or out \u2014 how does that shape what you'd want from a shared space?",207:"How much travel do you actually want? Adventure, comfort, both?",208:"Together vs. together-but-doing-separate-things \u2014 what's the difference for you?",209:"Phones in bed, in the bathroom, at meals \u2014 where's your line?",210:"How much of your social life would you want to do together vs. separately?",211:"Ideal vacation? Kind of vacation you'd politely never go on again?",212:"Pets \u2014 current, future, kind, number?",213:"Dream home in five years \u2014 city, suburb, country, abroad, mobile?",214:"How important is being near your family?",215:"Guests in the house \u2014 how often, who, hosting style?",216:"Cleanliness and order \u2014 where does your tolerance actually break?",217:"Cooking \u2014 who, when, how often, how serious about it?",218:"Holidays \u2014 sacred, optional, exhausting, meaningful?",219:"What's a hobby you want but don't have? What's been in the way?",220:"Same bedtime \u2014 important to you or not?",221:"Novelty or routine \u2014 ideal balance?",222:"Screens, what to watch, together or apart \u2014 your take?",223:"What do you do alone that you'd want a partner to leave alone? What would you love to be invited into?",224:"Birthdays, anniversaries, ordinary Tuesdays \u2014 how should they be handled?",225:"If a couple had one shared project \u2014 garden, podcast, renovation, trip, kid \u2014 what would you want yours to be?",226:"What does your work give you besides money? What would you lose without it?",227:"Honest relationship with ambition right now \u2014 hungry, tired, satisfied, lost?",228:"Define \u201Csuccessful\u201D for you in ten years. In your words, not anyone else's.",229:"What career risk have you been talking yourself out of?",230:"How do you handle work failure? What do you need from a partner then?",231:"How do you handle work success? What do you need from a partner then?",232:"How does your job affect your mood at home? When should a partner worry?",233:"Being the higher earner long-term \u2014 how does that feel? The lower one?",234:"Would you want a year off? What would have to be true?",235:"Starting your own thing \u2014 real plan or comforting fantasy?",236:"Career path you almost took \u2014 how do you feel about it?",237:"How should a couple handle one person getting an opportunity in another city or country?",238:"How important is it that a partner respects what you do? How would they show it?",239:"What kinds of work do you privately not respect? Honest or worth looking at?",240:"Retirement vision \u2014 early, never, slow taper, hard exit?",241:"Working hard during a young-kids period \u2014 how do you feel about that?",242:"What work-life balance is real for you? What do you actually mean by it?",243:"How much of who you are is wrapped up in what you do?",244:"Change careers tomorrow, no consequences \u2014 what would you do?",245:"What kind of partner support helps you in work? What feels like pressure?",246:"Do you want kids? How settled is that \u2014 and would you stay with someone whose answer was different?",247:"Underneath your yes, no, or maybe \u2014 what's actually driving it?",248:"How many kids do you want? How attached to that number?",249:"What kind of parent do you want to be? Like your parents or against them?",250:"What parenting style do you quietly judge? What's underneath the judgment?",251:"Religion, spirituality, or secular meaning with kids \u2014 how would you want to handle it?",252:"If you struggled to conceive \u2014 IVF, adoption, surrogacy, child-free?",253:"How do you feel about a partner's body changing through pregnancy?",254:"Who should do more of the night feedings, doctor's visits, playdates?",255:"Daycare, grandparents, nanny, sleep training \u2014 how do those feelings land?",256:"What kind of childhood would you want to give a kid? What would you protect them from?",257:"Discipline \u2014 where's the line between firm and harsh for you?",258:"How should parents handle disagreements in front of the kids?",259:"What did your parents do that you'd never do? What would you do anyway, now you get it?",260:"Screens for kids \u2014 at what ages, how much?",261:"Education \u2014 public, private, homeschool, abroad, alternative?",262:"If a kid turned out very different from their parents \u2014 temperament, gender, sexuality \u2014 what then?",263:"What kind of teenager are you worried about raising? What kind do you hope for?",264:"Stepparent or co-parent scenarios \u2014 open to either side?",265:"How should parents talk to kids about sex, money, and death?",266:"What family rituals would you want a kid to remember as adults?",267:"How would you want to handle a child with significant special needs?",268:"How would you want to handle losing a pregnancy or a child?",269:"How important are siblings? Does the age gap matter?",270:"What kind of grandparent do you picture being?",271:"Role of ambition in how you'd raise a kid \u2014 push hard, follow lead, both?",272:"Conflict in front of the kids \u2014 hide, model repair, age-appropriate honesty?",273:"Young kids and aging parents at once \u2014 how would you handle the overlap?",274:"Honest fear about becoming a parent \u2014 for the kid, for the relationship, for you?",275:"If you don't end up with kids, what does your life look like instead?",276:"Your relationship with your body right now \u2014 how does it shape how you move through the world?",277:"What kind of caretaker are you when someone's sick? What kind of patient are you?",278:"Health issue in your family you might inherit \u2014 how does it shape how you live?",279:"Therapy, medication, alternative medicine \u2014 where do your lines fall?",280:"Honest mental health history. What does a partner need to know to love you well through it?",281:"Honest history with substances \u2014 anything complicated worth knowing?",282:"Drinking with a partner \u2014 what would tell you one of you had a problem?",283:"What physical activity do you actually want? How realistic are you about it?",284:"How do you want to eat with a partner? Where do your food beliefs come from?",285:"How do you feel about aging? What are you most resistant to?",286:"How would you want a partner to push you on your health? When should they back off?",287:"Cosmetic procedures \u2014 for you, for a partner, in general?",288:"How would you want to handle a major medical diagnosis?",289:"End-of-life \u2014 what would you want a long-term partner to know now, while you're nowhere near it?",290:"Death \u2014 yours, a partner's, your parents', in general?",291:"What kind of funeral would feel right? How do you want to be remembered?",292:"Long-term care for aging parents \u2014 how should a couple handle it?",293:"Your relationship to sleep \u2014 protective, cavalier, struggling?",294:"Stress \u2014 what does carrying too much of it look like in you?",295:"What does taking good care of yourself actually look like, beyond the obvious?",296:"Three people besides a partner you most want in your life forever \u2014 and why each?",297:"What kind of friend are you in your closest friendships?",298:"What's the longest friendship you have? What's kept it alive?",299:"What friendships have you lost that you wish you hadn't? What's the pattern?",300:"How would you want a partner to fit into your friendships \u2014 fully integrated, partial, separate?",301:"How do you want to fit into a partner's friendships?",302:"How do you feel about close friendships with people you could plausibly be attracted to?",303:"Is there a friendship of yours a partner should know about up front? Why?",304:"How do you feel about your in-laws \u2014 actual or anticipated?",305:"Holidays with families \u2014 alternate, split, host, escape?",306:"How much family time in a typical week feels right? How does that compare to how you grew up?",307:"What kind of friends would you want to make as a couple?",308:"How do you feel about a partner having a strong social life without you?",309:"What social occasions drain you? Which fill you up?",310:"When your friends and partner don't click \u2014 how do you handle it?",311:"What kind of host do you want to be at home?",312:"How important is being part of a community? What kind?",313:"How do you handle distant friends \u2014 keep close, let drift, surge back?",314:"What family obligation do you take seriously that a partner should too?",315:"What family obligation do you wish you could stop carrying?",316:"How should a couple handle gossip \u2014 about friends, family, each other?",317:"When a friend's going through something you've never been through \u2014 how do you show up?",318:"How should a partner behave around your closest people? What should they never do?",319:"How would you feel if a partner got closer to one of your family than you are?",320:"Where in your social life do you most need a partner present? Where do you need to be alone?",321:"What do you actually believe about why we're here? How settled is that?",322:"Religious or spiritual tradition you grew up in \u2014 what's your relationship to it now?",323:"What practices, if any, connect you to something larger than yourself?",324:"What question about meaning have you been quietly carrying for years?",325:"What do you do with awe \u2014 where do you look for it, what do you make of it?",326:"Prayer, meditation, ritual \u2014 do any of them mean something to you? Would you want them in a shared life?",327:"What do you think happens when we die? How does that shape how you live?",328:"What moment in your life felt sacred, even if you don't use that word?",329:"What kind of spiritual difference would be a dealbreaker? What kind would be enriching?",330:"How do you handle suffering you can't explain or fix?",331:"Your relationship to gratitude \u2014 performed, deeply felt, hard to access, daily?",332:"What value do you hold that you can't fully justify? What does that tell you?",333:"What does a meaningful life look like? How is yours stacking up?",334:"How would you want a couple to mark births, deaths, milestones, losses?",335:"What tradition would you want to invent rather than inherit?",336:"Being part of something bigger than yourself \u2014 what calls you?",337:"How do you want to grow as a person in the next ten years?",338:"Dark night of the soul moments \u2014 what would you want from a partner?",339:"How do you make peace with what you can't control?",340:"Deepest source of meaning in your life right now \u2014 how protected is it?",341:"Five years into a relationship you actually wanted \u2014 what's the texture of daily life? Not milestones, texture.",342:"What do you want to be true about a future relationship that isn't true of any you've had?",343:"Is there a fear about where this could go that you've never said out loud?",344:"Is there a hope about where this could go that you've never said out loud?",345:"What would you want a couple to commit to, explicitly, before getting more serious?",346:"How do you want to make big decisions with a partner \u2014 gut, research, lists, sleeping on it?",347:"What does engagement mean to you, beyond the ring?",348:"What does marriage actually change, beyond the ceremony?",349:"Your ideal wedding \u2014 size, cost, who's there, who isn't?",350:"How should a couple handle people who don't approve of them?",351:"What milestone shouldn't a partner assume you want \u2014 moving in, marriage, kids, joint accounts?",352:"How do you want to celebrate a partner's wins \u2014 public, private, ritualized, casual?",353:"How could a couple get lazy with each other in ten years? How would you guard against it?",354:"What kind of couple do you NOT want to become? What's the early warning sign?",355:"What kind of couple do you most want to be? What would they have done to get there?",356:"How would you want to handle a hard year \u2014 illness, money, loss?",357:"What promise would you want a partner to make you that you've never asked for?",358:"What promise would you want to make a partner that you've never offered?",359:"If a relationship ran its course, how would you want to know? How should it be handled?",360:"Worst-case breakup \u2014 what should it look like? What does that tell you about how you want to be treated now?",361:"What quality in you do you want a partner to protect from life grinding it down?",362:"What quality in a future partner would you most want to protect?",363:"If everything went right between two people, what would you most want to look back and say they did?",364:"What question do you wish I'd asked you in this book that I didn't?",365:"What's the conversation you most want to have with me this month \u2014 and what's stopping us from having it tonight?"}
-};
+// Reveal-on-scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
 
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smart nav: hide on scroll down, show on scroll up
+let lastScroll = 0;
+const nav = document.querySelector('nav');
+nav.style.transition = 'transform 0.35s ease';
+window.addEventListener('scroll', () => {
+  const cur = window.pageYOffset;
+  if (cur > 150 && cur > lastScroll) {
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    nav.style.transform = 'translateY(0)';
+  }
+  lastScroll = cur;
+});
 </script>
-<script>
-(function() {
-  'use strict';
-  const { SECTIONS, Q } = window.DD_DATA;
 
-  // SVG icons
-  const HEART_OUTLINE = '<svg class="heart-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
-  const HEART_FILLED  = '<svg class="heart-svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
-  const HEART_TAB     = '<svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
-  const HEART_TAB_FILLED = '<svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
-  const MOON_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-  const SUN_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
-  const SPARKLES_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z"/><path d="M19 13l.8 2.4L22 16l-2.2.6L19 19l-.8-2.4L16 16l2.2-.6z"/><path d="M5 4l.5 1.5L7 6l-1.5.5L5 8l-.5-1.5L3 6l1.5-.5z"/></svg>';
-  const ARROW_LEFT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>';
-  const CHECK_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
-  const EDIT_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg>';
-  const NOTE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>';
-  const DOWNLOAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
-  const SHARE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
-
-  // Helpers
-  function sectionFor(n) { return SECTIONS.find(s => n >= s.start && n <= s.end); }
-  function pad(n) { return String(n).padStart(3, '0'); }
-  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-  function fmtDate(iso) {
-    if (!iso) return '';
-    const d = new Date(iso);
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  }
-
-  // Safe storage
-  function safeGet(key, fallback) {
-    try { const v = localStorage.getItem(key); return v === null ? fallback : v; }
-    catch (e) { return fallback; }
-  }
-  function safeSet(key, val) {
-    try { localStorage.setItem(key, val); } catch (e) {}
-  }
-  function safeParse(s, fallback) {
-    try { return JSON.parse(s); } catch (e) { return fallback; }
-  }
-
-  // Detect iOS / standalone mode
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-  const showInstallHint = isIOS && !isStandalone && safeGet('dd_install_dismissed', '0') !== '1';
-
-  // State
-  let state = {
-    tab: 'browse',
-    view: 'sections',
-    currentSection: null,
-    currentQuestion: null,
-    expandedNote: null,
-    dark: (function() {
-      const stored = safeGet('dd_dark', null);
-      if (stored === '1') return true;
-      if (stored === '0') return false;
-      // Default to system preference on first visit
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    })(),
-    bookmarks: safeParse(safeGet('dd_bookmarks', '[]'), []),
-    notes: safeParse(safeGet('dd_notes', '{}'), {}),
-    discussed: safeParse(safeGet('dd_discussed', '{}'), {}),
-    settings: Object.assign({
-      morningOn: false, morningTime: '08:00',
-      eveningOn: true, eveningTime: '21:00',
-      order: 'sequential', snooze: false
-    }, safeParse(safeGet('dd_settings', '{}'), {}))
-  };
-
-  function save() {
-    safeSet('dd_bookmarks', JSON.stringify(state.bookmarks));
-    safeSet('dd_settings', JSON.stringify(state.settings));
-    safeSet('dd_notes', JSON.stringify(state.notes));
-    safeSet('dd_discussed', JSON.stringify(state.discussed));
-    safeSet('dd_dark', state.dark ? '1' : '0');
-  }
-
-  function isBookmarked(n) { return state.bookmarks.indexOf(n) !== -1; }
-  function toggleBookmark(n) {
-    const i = state.bookmarks.indexOf(n);
-    if (i !== -1) state.bookmarks.splice(i, 1);
-    else state.bookmarks.push(n);
-    save();
-    render();
-  }
-  function toggleDiscussed(n) {
-    if (state.discussed[n]) delete state.discussed[n];
-    else state.discussed[n] = new Date().toISOString();
-    save();
-    render();
-  }
-  function setNote(n, v) {
-    if (v.trim()) state.notes[n] = v;
-    else delete state.notes[n];
-    save();
-  }
-
-  // Renderers
-  function renderQuestionCard(n, expanded) {
-    const sec = sectionFor(n);
-    const saved = isBookmarked(n);
-    const note = state.notes[n] || '';
-    const disc = state.discussed[n];
-    return `<div class="q-card" data-question="${n}">
-      <div class="q-head">
-        <div style="flex: 1; min-width: 0;">
-          <div class="section-pill">${esc(sec.title)}</div>
-          <div class="q-num">No. ${pad(n)}</div>
-        </div>
-        <button class="heart-btn ${saved ? 'saved' : ''}" data-bookmark="${n}" aria-label="${saved ? 'Remove from saved' : 'Save question'}" aria-pressed="${saved}">
-          ${saved ? HEART_FILLED : HEART_OUTLINE}
-        </button>
-      </div>
-      <p class="q-text">${esc(Q[n])}</p>
-      <div class="q-actions">
-        ${disc
-          ? `<button class="action-btn is-active" data-discussed="${n}">${CHECK_ICON} Discussed ${fmtDate(disc)}</button>`
-          : `<button class="action-btn" data-discussed="${n}">Mark as discussed</button>`}
-        <button class="action-btn ${note ? 'has-note' : ''}" data-expand="${n}">${note ? NOTE_ICON : EDIT_ICON} ${note ? 'Notes saved' : 'Add a note'}</button>
-      </div>
-      ${expanded ? `
-        <div class="notes-wrap">
-          <textarea class="notes-area" data-note="${n}" placeholder="Realizations, partner's answer, your own answer, anything you don't want to forget...">${esc(note)}</textarea>
-          <p class="note-hint">Saved automatically. Stays on this device.</p>
-        </div>
-      ` : ''}
-    </div>`;
-  }
-
-  function renderInstallHint() {
-    if (!showInstallHint) return '';
-    return `
-      <div class="install-card" id="install-card">
-        <div class="install-card-icon">${SHARE_ICON}</div>
-        <div class="install-card-text">
-          Add to your home screen for the full experience: tap the Share button below, then "Add to Home Screen."
-        </div>
-        <button class="install-close" id="install-close" aria-label="Dismiss">\u00D7</button>
-      </div>
-    `;
-  }
-
-  function renderBrowse() {
-    if (state.view === 'sections') {
-      const rows = SECTIONS.map(s => `
-        <div class="section-row" data-section="${s.id}">
-          <div class="s-roman">${s.roman}.</div>
-          <div class="s-info">
-            <div class="s-title">${esc(s.title)}</div>
-            <div class="s-sub">${esc(s.subtitle)}</div>
-          </div>
-          <div class="s-range">${pad(s.start)}\u2013${pad(s.end)}</div>
-        </div>
-      `).join('');
-      return `
-        ${renderInstallHint()}
-        <div class="intro-block">
-          <p class="intro-sub">Fifteen sections.<br>Three hundred and sixty-five questions.</p>
-          <div class="intro-ornament">\u2767</div>
-        </div>
-        <button class="ghost-btn" id="pick-random" style="width: 100%; margin-bottom: 0.5rem;">
-          ${SPARKLES_ICON} Pick one for me
-        </button>
-        <div style="margin-top: 1.25rem;">${rows}</div>
-      `;
-    }
-    if (state.view === 'section-list') {
-      const sec = SECTIONS.find(s => s.id === state.currentSection);
-      const cards = [];
-      for (let i = sec.start; i <= sec.end; i++) {
-        cards.push(renderQuestionCard(i, state.expandedNote === i));
-      }
-      return `
-        <button class="ghost-btn" id="back-to-sections" style="margin-bottom: 1rem;">
-          ${ARROW_LEFT} All sections
-        </button>
-        <div class="intro-block">
-          <p class="eyebrow">Section ${sec.roman} of XV</p>
-          <h2 class="intro-title">${esc(sec.title)}</h2>
-          <p class="intro-sub">${esc(sec.subtitle)}</p>
-          <div class="intro-ornament">\u2767</div>
-        </div>
-        ${cards.join('')}
-      `;
-    }
-    if (state.view === 'single') {
-      const n = state.currentQuestion;
-      return `
-        <button class="ghost-btn" id="back-to-sections" style="margin-bottom: 1rem;">
-          ${ARROW_LEFT} Back
-        </button>
-        ${renderQuestionCard(n, state.expandedNote === n)}
-        <button class="ghost-btn" id="pick-random" style="width: 100%; margin-top: 0.5rem;">
-          ${SPARKLES_ICON} Another one
-        </button>
-      `;
-    }
-  }
-
-  function toggleHTML(checked, id) {
-    return `<label class="toggle"><input type="checkbox" id="${id}" ${checked ? 'checked' : ''} /><span class="toggle-bg ${checked ? 'on' : ''}"></span></label>`;
-  }
-
-  function renderDaily() {
-    const s = state.settings;
-    return `
-      <div class="intro-block">
-        <p class="eyebrow">Notifications</p>
-        <h2 class="intro-title">A question a <em>day</em></h2>
-        <p class="intro-sub">Set your rhythm, then download<br>the notification file at the bottom.</p>
-        <div class="intro-ornament">\u2767</div>
-      </div>
-
-      <div class="surface">
-        <div class="row">
-          <div>
-            <div class="row-label">Morning question</div>
-            <div class="row-sub">A prompt to start the day</div>
-          </div>
-          ${toggleHTML(s.morningOn, 'morning-on')}
-        </div>
-        ${s.morningOn ? `<div class="row"><div class="row-label">Time</div><input type="time" id="morning-time" value="${s.morningTime}" /></div>` : ''}
-      </div>
-
-      <div class="surface">
-        <div class="row">
-          <div>
-            <div class="row-label">Evening question</div>
-            <div class="row-sub">Before bed, before screens</div>
-          </div>
-          ${toggleHTML(s.eveningOn, 'evening-on')}
-        </div>
-        ${s.eveningOn ? `<div class="row"><div class="row-label">Time</div><input type="time" id="evening-time" value="${s.eveningTime}" /></div>` : ''}
-      </div>
-
-      <div style="margin: 1.25rem 0 1rem;">
-        <div class="chip-label">Question order</div>
-        <div style="display: flex; gap: 8px;">
-          <button class="chip ${s.order === 'sequential' ? 'on' : ''}" data-order="sequential">In order \u00B7 1\u2192365</button>
-          <button class="chip ${s.order === 'random' ? 'on' : ''}" data-order="random">Random</button>
-        </div>
-      </div>
-
-      <div class="surface">
-        <div class="row">
-          <div>
-            <div class="row-label">Allow snooze</div>
-            <div class="row-sub">Skip a day without losing your place</div>
-          </div>
-          ${toggleHTML(s.snooze, 'snooze-on')}
-        </div>
-      </div>
-
-      <button class="primary-btn" id="download-ics">
-        ${DOWNLOAD_ICON} Download notification file
-      </button>
-      <p class="download-hint">Imports as its own calendar named "Deeper Dating."<br>Toggle it on or off anytime in the Calendars list —<br>without touching your main calendar.</p>
-    `;
-  }
-
-  function renderBookmarks() {
-    if (state.bookmarks.length === 0) {
-      return `
-        <div class="empty">
-          <div class="empty-icon">${HEART_OUTLINE.replace('heart-svg', 'heart-svg" style="width:40px;height:40px')}</div>
-          <p class="empty-title">No saved questions yet</p>
-          <p class="empty-sub">Tap the heart on any question<br>to keep it close.</p>
-        </div>
-      `;
-    }
-    const sorted = state.bookmarks.slice().sort((a, b) => a - b);
-    return `
-      <div class="intro-block">
-        <p class="eyebrow">For Later</p>
-        <h2 class="intro-title">The <em>kept</em> ones</h2>
-        <p class="intro-sub">${sorted.length} question${sorted.length === 1 ? '' : 's'} worth coming back to</p>
-        <div class="intro-ornament">\u2767</div>
-      </div>
-      ${sorted.map(n => renderQuestionCard(n, state.expandedNote === n)).join('')}
-    `;
-  }
-
-  function render() {
-    document.body.classList.toggle('dark', state.dark);
-    document.getElementById('mode-toggle').innerHTML = state.dark ? SUN_ICON : MOON_ICON;
-
-    const savedTabIcon = document.getElementById('saved-tab-icon');
-    if (savedTabIcon) savedTabIcon.innerHTML = state.bookmarks.length > 0 ? HEART_TAB_FILLED : HEART_TAB;
-
-    document.querySelectorAll('.tab-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.tab === state.tab);
-    });
-
-    const content = document.getElementById('content');
-    if (state.tab === 'browse') content.innerHTML = renderBrowse();
-    else if (state.tab === 'daily') content.innerHTML = renderDaily();
-    else if (state.tab === 'bookmarks') content.innerHTML = renderBookmarks();
-  }
-
-  // ICS generation
-  function pad2(n) { return String(n).padStart(2, '0'); }
-  function icsDate(d) {
-    return d.getFullYear() + pad2(d.getMonth()+1) + pad2(d.getDate()) + 'T' + pad2(d.getHours()) + pad2(d.getMinutes()) + '00';
-  }
-  function generateICS() {
-    const s = state.settings;
-    let order = [];
-    for (let i = 1; i <= 365; i++) order.push(i);
-    if (s.order === 'random') {
-      for (let i = order.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [order[i], order[j]] = [order[j], order[i]];
-      }
-    }
-    const lines = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Deeper Dating//365 Questions//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:Deeper Dating · 365 Questions','X-WR-CALDESC:A year of daily questions for closer conversations','X-APPLE-CALENDAR-COLOR:#8B6F4E'];
-    const start = new Date();
-    start.setHours(0,0,0,0);
-    start.setDate(start.getDate() + 1);
-    const times = [];
-    if (s.morningOn) times.push({ label: 'Morning', time: s.morningTime });
-    if (s.eveningOn) times.push({ label: 'Evening', time: s.eveningTime });
-    if (times.length === 0) times.push({ label: 'Daily', time: '20:00' });
-
-    for (let day = 0; day < 365; day++) {
-      const qNum = order[day];
-      const sec = sectionFor(qNum);
-      times.forEach(t => {
-        const [hh, mm] = t.time.split(':').map(Number);
-        const dt = new Date(start);
-        dt.setDate(dt.getDate() + day);
-        dt.setHours(hh, mm, 0, 0);
-        const dtEnd = new Date(dt.getTime() + 15 * 60000);
-        const uid = `dd-${qNum}-${t.label}-${day}@deeperdating`;
-        const cleanQ = Q[qNum].replace(/[,;\\]/g, ' ');
-        const summary = `Q${pad(qNum)} \u00B7 ${cleanQ.slice(0, 90)}`;
-        const desc = `${sec.title}\\n\\n${cleanQ}`;
-        lines.push('BEGIN:VEVENT','UID:'+uid,'DTSTAMP:'+icsDate(new Date()),'DTSTART:'+icsDate(dt),'DTEND:'+icsDate(dtEnd),'SUMMARY:'+summary,'DESCRIPTION:'+desc,'BEGIN:VALARM','ACTION:DISPLAY','TRIGGER:PT0M','DESCRIPTION:'+summary,'END:VALARM','END:VEVENT');
-      });
-    }
-    lines.push('END:VCALENDAR');
-    return lines.join('\r\n');
-  }
-  function downloadICS() {
-    const ics = generateICS();
-    const blob = new Blob([ics], { type: 'text/calendar' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url; a.download = 'deeper-dating-365.ics';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }
-
-  // Event handlers
-  document.querySelectorAll('.tab-btn').forEach(b => {
-    b.addEventListener('click', () => {
-      state.tab = b.dataset.tab;
-      state.view = 'sections';
-      state.expandedNote = null;
-      render();
-      document.getElementById('content').scrollTop = 0;
-    });
-  });
-
-  document.getElementById('mode-toggle').addEventListener('click', () => {
-    state.dark = !state.dark;
-    save();
-    render();
-  });
-
-  document.getElementById('content').addEventListener('click', e => {
-    // Bookmark first — protect against bubbling
-    const bm = e.target.closest('[data-bookmark]');
-    if (bm) {
-      e.preventDefault();
-      e.stopPropagation();
-      toggleBookmark(Number(bm.dataset.bookmark));
-      return;
-    }
-    if (e.target.closest('#install-close')) {
-      safeSet('dd_install_dismissed', '1');
-      const card = document.getElementById('install-card');
-      if (card) card.style.display = 'none';
-      return;
-    }
-    const sectionEl = e.target.closest('[data-section]');
-    if (sectionEl) {
-      state.currentSection = Number(sectionEl.dataset.section);
-      state.view = 'section-list';
-      state.expandedNote = null;
-      render();
-      document.getElementById('content').scrollTop = 0;
-      return;
-    }
-    if (e.target.closest('#back-to-sections')) {
-      state.view = 'sections';
-      state.expandedNote = null;
-      render();
-      document.getElementById('content').scrollTop = 0;
-      return;
-    }
-    if (e.target.closest('#pick-random')) {
-      state.currentQuestion = Math.floor(Math.random() * 365) + 1;
-      state.view = 'single';
-      state.expandedNote = null;
-      render();
-      document.getElementById('content').scrollTop = 0;
-      return;
-    }
-    const disc = e.target.closest('[data-discussed]');
-    if (disc) { toggleDiscussed(Number(disc.dataset.discussed)); return; }
-    const exp = e.target.closest('[data-expand]');
-    if (exp) {
-      const n = Number(exp.dataset.expand);
-      state.expandedNote = (state.expandedNote === n) ? null : n;
-      render();
-      return;
-    }
-    const order = e.target.closest('[data-order]');
-    if (order) {
-      state.settings.order = order.dataset.order;
-      save();
-      render();
-      return;
-    }
-    if (e.target.closest('#download-ics')) {
-      downloadICS();
-      const btn = document.getElementById('download-ics');
-      btn.innerHTML = CHECK_ICON + ' Downloaded';
-      setTimeout(() => render(), 1800);
-      return;
-    }
-  });
-
-  document.getElementById('content').addEventListener('change', e => {
-    if (e.target.id === 'morning-on') { state.settings.morningOn = e.target.checked; save(); render(); }
-    if (e.target.id === 'evening-on') { state.settings.eveningOn = e.target.checked; save(); render(); }
-    if (e.target.id === 'snooze-on') { state.settings.snooze = e.target.checked; save(); render(); }
-    if (e.target.id === 'morning-time') { state.settings.morningTime = e.target.value; save(); }
-    if (e.target.id === 'evening-time') { state.settings.eveningTime = e.target.value; save(); }
-  });
-
-  document.getElementById('content').addEventListener('input', e => {
-    if (e.target.dataset && e.target.dataset.note) {
-      setNote(Number(e.target.dataset.note), e.target.value);
-    }
-  });
-
-  // Initial render + hide splash
-  render();
-  setTimeout(() => {
-    const splash = document.getElementById('splash');
-    splash.classList.add('hide');
-    setTimeout(() => splash.remove(), 600);
-  }, 500);
-
-})();
-
-</script>
 </body>
 </html>
